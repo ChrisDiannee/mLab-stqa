@@ -31,7 +31,8 @@ const studentSchema = new mongoose.Schema({
 	lastname: 'string'
 });
 // const uri = "mongodb://username:password@host.domain.com:port/database";
-const uri = process.env.DB_URI;
+const uri="mongodb://admin:admin@ds137759.mlab.com:37759/stqa-demo";
+// const uri = process.env.DB_URI;
 const options = {
 	useMongoClient: true,
 	promiseLibrary: require('bluebird'),
@@ -103,7 +104,7 @@ app.delete('/students', (req, res) => {
 	Students.deleteOne(query, callback);
 });
 
-/*>>> run server and assign port <<<*/
+/*>>> run server and assign port <<<*f/
 app.set('port',(process.env.PORT || 3000));
 app.listen(app.get('port'),()=>{
 	console.log('listening on ', app.get('port'));
