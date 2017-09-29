@@ -104,7 +104,7 @@ app.delete('/students', (req, res) => {
 	Students.deleteOne(query, callback);
 });
 
-/*>>> run server and assign port <<<*f/
+/*>>> run server and assign port <<<*/
 app.set('port',(process.env.PORT || 3000));
 app.listen(app.get('port'),()=>{
 	console.log('listening on ', app.get('port'));
